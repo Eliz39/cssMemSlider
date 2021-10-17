@@ -1,0 +1,95 @@
+.slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.item-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.item {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+}
+
+.active,
+.next,
+.active-name {
+    display: block;
+}
+
+.next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.description {
+    margin: 30px 20%;
+    font-size: 18px;
+}
+
+.project-name {
+    padding: 10px;
+}
+
+.controls {
+    position: absolute;
+    /* top: 0; */
+    bottom: 0;
+    width: 15%;
+    cursor: pointer;
+}
+
+.dots {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    color: #2c8de1;
+    border: 3px solid;
+}
+
+.to-left {
+    animation-name: left;
+}
+.to-right {
+    animation-name: right;
+    animation-direction: reverse ;
+}
+.from-left {
+    animation-name: left;
+    animation-direction: reverse ;
+}
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0 ;
+    }
+}
