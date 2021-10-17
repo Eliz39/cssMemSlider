@@ -77,7 +77,6 @@ input[name="r"] {
 }
 
 .project-name {
-    overflow: hidden;
     width: 500%;
     height: 100%;
 }
@@ -161,10 +160,10 @@ input[name="r"] {
     .item-container {
         height: 70%;
     }
-}
-
-@media (max-width: 1300px) {
     section {
         padding: 3%;
+    }
+    .controls {
+        flex-direction: column-reverse;
     }
 }
