@@ -1,24 +1,47 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+* {
+    box-sizing: border-box;
     margin: 0;
-    background: #1a262f;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-style: bold;
+    font-size: 25px;
+    background: url(./assets/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 1.25rem 0;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 section {
-    margin: 0 auto;
-    height: 100%;
-    max-height: 57.5rem;
+    /* margin: 0 auto; */
+    height: 100vh;
+    /* max-height: 57.5rem; */
     width: 60%;
     max-width: 90rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider {
-    margin: 0 auto;
-    height: 100%;
-    max-height: 60rem;
+    /* margin: 0 auto; */
+    /* height: 100%;
+    max-height: 60rem; */
     width: 80%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 2.5em;
 }
 
 .navigation {
@@ -26,13 +49,13 @@ section {
 }
 
 .bar {
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 0.2rem solid #2c8de1;
-    border: 0.6rem solid #1a262f;
+    width: 1em;
+    height: 1em;
+    /* border: 0.2rem solid #2c8de1; */
+    border: 0.1em solid #1a262f;
     background-color: #a7cfee;
     margin: 0.625rem 0 0.625rem 0.625rem;
-    border-radius: 20px;
+    border-radius: 30px;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -52,25 +75,28 @@ input[name="r"] {
 
 .item-container {
     display: flex;
+    align-items: center;
     width: 500%;
     height: 80%;
+    margin-left: 20%;
 }
 
 .item {
-    height: 100%;
+    height: 60%;
     width: 20%;
     transition: 0.5s ease;
 }
 
 .item img {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: auto;
 }
 
 .controls {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    margin: 0 15% 2% 20%;
 }
 
 .project-names {
@@ -84,9 +110,9 @@ input[name="r"] {
 }
 
 .text {
-    color: #2c8de1;
-    padding-top: 0.625rem;
-    font-size: 2rem;
+    /* color: #2c8de1; */
+    padding: 0.625rem;
+    /* font-size: 1rem; */
     height: 100%;
     width: 100%;
     transition: 0.5s ease;
@@ -96,6 +122,7 @@ input[name="r"] {
     display: flex;
     width: 500%;
     height: 100%;
+    text-shadow: 0 0 10px #FFFFFF;
 }
 
 #r1:checked ~ .item-container .i1, .project-name .active-name {
